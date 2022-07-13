@@ -19,27 +19,11 @@
       - bokeh
       - numpy
       - panel==0.13.1
+      - paths:
+            - /static/python/app1.py
     </py-env>
     <body>
       <div id="simple_app"></div>
-      <py-script>
-        import panel as pn
-        import calendar
-
-        pn.extension(sizing_mode="stretch_width")
-
-        month = pn.widgets.IntSlider(start=1, end=12, name='Month')
-
-        def callback(new):
-            c=calendar.HTMLCalendar(calendar.SUNDAY)
-            return c.formatmonth(2022,new)
-
-        pn.Column(
-            "# Panel PyScript Calendar Example",
-            month,
-            pn.bind(callback, month),
-        ).servable(target='simple_app');
-
-      </py-script>
+      <py-script src="/static/python/app1.py"></py-script>
   </body>
 </html>
