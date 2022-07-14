@@ -130,3 +130,6 @@ dmypy.json
 
 # GMS
 .idea/
+.DS_Store
+static/.DS_Store
+static/python/nmrtools/bin
